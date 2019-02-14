@@ -1,0 +1,179 @@
+.login{
+  z-index: 99;
+  width: 320px;
+  height: 340px;
+  position: fixed;
+  left: 60%;
+  top: 30%;
+  background: rgba(255,255,255,0.8);
+  padding: 20px 20px 25px 20px;
+  border: 1px solid rgba(255,255,255,0.82);
+  border-radius: 5px;
+}
+#dataBox{
+  overflow-x: hidden;
+}
+:global {
+  .banner-anim{
+    height: 95vh;
+    .bg{
+      height: 100%;
+      position: relative;
+      background: #fcdac8 url(../../image/imgRedBg.png) repeat-x left center,
+    }
+  }
+  .banner-anim-thumb-default span {
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50% !important;
+  }
+  .banner-anim-arrow-default.next:before, .banner-anim-arrow-default.prev:before, .banner-anim-arrow-default.next:after, .banner-anim-arrow-default.prev:after {
+    width: 2px;
+    height: 15px;
+    background: #fff;
+    display: block;
+    content: ' ';
+    position: absolute;
+  }
+  .banner-anim-arrow-default.next {
+     right: 2% !important;
+   }
+  .banner-anim-arrow-default.prev {
+    left: 2% !important;
+  }
+  .banner-anim-arrow-default {
+    background: rgba(0, 0, 0, 0) !important;
+  }
+
+}
+.cirSliceA {
+  top: -130vh !important;
+  left: -200px !important;
+  height: 650px !important;
+  width: 650px !important;
+}
+.cirSliceB {
+  top: -130vh !important;
+  right: -100px !important;
+  height: 600px !important;
+  width: 600px !important;
+}
+.cirSliceC {
+  top: -75vh !important;
+  left: -50px !important;
+  height: 800px !important;
+  width: 800px !important;
+}
+.cirSliceA, .cirSliceB, .cirSliceC {
+  position: absolute;
+  border: 2px solid rgba(204,255,255,0.15);
+  -moz-border-radius: 400px;
+  -webkit-border-radius: 400px;
+  border-radius: 400px;
+}
+.titleTxt {
+  position: absolute;
+  left: 20%;
+  top: -70vh;
+  border-left: 5px solid #8dd7f3;
+  padding-left: 15px;
+  animation: fadeInRight 1s 0.6s ease both;
+  -webkit-animation: fadeInRight 1s 0.6s ease both;
+  -moz-animation: fadeInRight 1s 0.6s ease both;
+  z-index: 15;
+}
+.txtA {
+  font-size: 54px;
+  font-weight: bold;
+  font-family: "Arial Black", Gadget, sans-serif,"宋体";
+  letter-spacing: 8px;
+  line-height: 100%;
+  color: #ffd300;
+  list-style: none;
+}
+.txtB {
+  font-size: 20px;
+  text-indent: 3px;
+  font-weight: lighter;
+  letter-spacing: 6px;
+  line-height: 120%;
+  padding-top: 10px;
+  color: #fff;
+  list-style: none;
+}
+.imgBox {
+  position: absolute;
+  top: -70vh;
+  left: 30%;
+  height: 287px;
+  width: 551px;
+  z-index: 9;
+  background: url(../../image/logImgBlueA.png) no-repeat right bottom;
+  animation: fadeInLeft 1s .2s ease both;
+  -webkit-animation: fadeInLeft 1s .2s ease both;
+  -moz-animation: fadeInLeft 1s .2s ease both;
+}
+.titleRedTxt {
+  position: absolute;
+  left: 20%;
+  top: -70vh;
+  border-left: 5px solid #f59188;
+  padding-left: 15px;
+  animation: fadeInRight 1s 0.6s ease both;
+  -webkit-animation: fadeInRight 1s 0.6s ease both;
+  -moz-animation: fadeInRight 1s 0.6s ease both;
+  z-index: 15;
+}
+.txtRedA {
+  font-size: 54px;
+  font-weight: bold;
+  font-family: "Arial Black", Gadget, sans-serif,"宋体";
+  letter-spacing: 8px;
+  line-height: 100%;
+  color: #ef3838;
+  list-style: none;
+}
+.txtRedB {
+  font-size: 20px;
+  text-indent: 3px;
+  font-weight: lighter;
+  letter-spacing: 6px;
+  line-height: 120%;
+  padding-top: 10px;
+  color: #333;
+  list-style: none;
+}
+.imgRedBox {
+  position: absolute;
+  top: -70vh;
+  left: 30%;
+  height: 340px;
+  width: 536px;
+  z-index: 9;
+  background: url(../../image/logImgRedA.png) no-repeat 80px 0;
+  animation: fadeInLeft 1s .2s ease both;
+  -webkit-animation: fadeInLeft 1s .2s ease both;
+  -moz-animation: fadeInLeft 1s .2s ease both;
+}
+.imgChipA {
+  position: absolute;
+  top: -70vh;
+  left: 30%;
+  width: 536px;
+  height: 198px;
+  background: url(../../image/logImgRedB.png) no-repeat;
+  animation: bounceInDown 0.4s 1.1s ease both;
+  -webkit-animation: bounceInDown 0.4s 1.1s ease both;
+  -moz-animation: bounceInDown 0.4s 1.1s ease both;
+}
+.footerCopy {
+  background: #fff;
+  border: none;
+  text-align: center;
+  height: 5vh;
+  line-height: 5vh;
+}
+.center {
+  text-align: center;
+  color: #666;
+}

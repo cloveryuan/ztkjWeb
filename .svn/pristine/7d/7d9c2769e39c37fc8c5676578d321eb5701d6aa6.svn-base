@@ -1,0 +1,177 @@
+:global {
+  .trigger {
+    font-size: 24px;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: color .3s;
+    color: #fff;
+  }
+
+  .trigger:hover {
+    color: #9b16c4;
+  }
+  /*滚动条样式*/
+  .ant-layout-sider::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+  }
+  .ant-layout-sider::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+  .ant-layout-sider::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+  }
+
+  // -----------------
+  .ant-menu.ant-menu-sub.ant-menu-inline{
+    max-height:380px;
+    overflow-y: scroll;
+  }
+    .ant-menu.ant-menu-sub.ant-menu-vertical{
+    overflow-y: scroll;
+  }
+  .ant-tooltip.ant-menu-inline-collapsed-tooltip.ant-tooltip-placement-right{
+    display:none;
+  }
+.ant-menu.ant-menu-sub::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 4px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 4px;
+  }
+  .ant-menu.ant-menu-sub::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }  
+  .ant-menu.ant-menu-sub::-webkit-scrollbar-track {/*滚动条里面轨道*/
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+  }
+  .ant-layout-sider-children{
+    width:100%
+  }
+  .inputGroup{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    margin:0 auto;
+  }
+  .rdata{
+    background:url('../../image/one_icon.png') no-repeat;
+    background-position: -17px -2px;
+  }
+  .alarm{
+    background:url('../../image/one_icon.png') no-repeat;
+    background-position: -16px -44px;
+  }
+  .hdata{
+    background:url('../../image/one_icon.png') no-repeat;
+    background-position: -17px -82px;
+  }
+  .set{
+    background:url('../../image/one_icon.png') no-repeat;
+    background-position: -16px -122px;
+  }
+}
+
+.sidebarForm{
+  border-radius: 3px;
+  border: 1px solid #374850;
+  background-color: #374850;
+  margin: 10px 0 !important;
+  overflow: visible;
+  text-overflow: clip;
+  width:100%;
+}
+.formControl{
+  color: #666 !important;
+  border-top-left-radius: 2px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 2px !important;
+  box-shadow: none !important;
+  background-color: #374850 !important;
+  border: 1px solid transparent !important;
+  height: 35px !important;
+  position: relative !important;
+  z-index: 2 !important;
+  float: left !important;
+  margin-bottom: 0 !important;
+  padding: 6px 12px !important;
+  font-size: 14px !important;
+}
+.inputBtn{
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+  width: 1%;
+}
+.btnFlat{
+  color: #999;
+  border-top-left-radius: 0;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 0;
+  box-shadow: none;
+  background-color: #374850;
+  border: 1px solid transparent;
+  height: 35px;
+  position: relative;
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+}
+.menuresult {
+  z-index: 999;
+  position: absolute;
+  top: 105px;
+  left: 11px;
+  max-height: 250px;
+  overflow: auto;
+  margin: 0;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-radius: 3px;
+  border: 1px solid #374850;
+  background-color: #374850;
+}
+.menuresult a {
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  margin-bottom: -1px;
+  display: block;
+  padding: 10px 15px;
+  color: #222d32;
+}
+
+
+.logo {
+    height: 64px;
+    background: #15a589;
+    line-height: 64px;
+    padding-left:20px;
+    img{
+      height:40px;
+      animation: App-logo-spin infinite 20s linear;
+      transform-origin:50% 50%;
+    }
+  }
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }

@@ -1,0 +1,30 @@
+
+    td{
+        padding:15px 0
+    }
+:global{
+  .ant-advanced-search-form {
+    padding: 24px;
+    background: #fbfbfb;
+  }
+
+  .ant-advanced-search-form .ant-form-item {
+    display: flex;
+  }
+
+  .ant-advanced-search-form .ant-form-item-control-wrapper {
+    flex: 1;
+  }
+  .ant-row{
+      background:#fff;
+  }
+  .ant-form-item-label {
+    text-align: left!important
+  }
+  .bottom_she{
+      margin-top:20px;
+  }
+  .bottom_she .ant-advanced-search-form .ant-form-item{
+    margin-bottom:10px;
+  }
+}

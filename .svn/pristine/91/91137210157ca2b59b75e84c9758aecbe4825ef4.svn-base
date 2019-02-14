@@ -1,0 +1,16 @@
+.panel{
+  border-bottom: 1px solid #e8e8e8;
+  border-left: 1px solid #e8e8e8;
+  color: #0E2D5F;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+  background: #E0ECFF;
+  padding-left: 5px;
+}
+li{
+  list-style: none;
+}
+.panelRow{
+  padding: 5px 30px;
+}

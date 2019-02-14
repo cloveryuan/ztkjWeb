@@ -1,0 +1,33 @@
+import React from 'react';
+import { Modal, Form } from 'antd';
+import { FormComponentProps } from 'antd/lib/form/Form'
+import './link.scss'
+
+export interface PropsCollectionCreateForm {
+    link?: boolean;
+    onCancel?: () => void;
+}
+export const Link = Form.create()(
+    class extends React.Component<PropsCollectionCreateForm & FormComponentProps, any> {
+        onCreate = () => {
+            this.props.onCancel()
+        }
+        render() {
+            return (
+                <Modal
+                    visible={this.props.link}
+                    onCancel={this.props.onCancel}
+                    onOk={this.onCreate}
+                    width="100%"
+                    footer={null}
+                    style={{ top: 0, paddingBottom: 0 }}
+                >
+                    <iframe
+                        src="http://localhost:8081/hitopo/runview.aspx?filename=180%E7%AB%AF%E5%8F%A3"
+                        style={{ width: '100%', height: '100vh' }}
+                    />
+                </Modal>
+            );
+        }
+    }
+);

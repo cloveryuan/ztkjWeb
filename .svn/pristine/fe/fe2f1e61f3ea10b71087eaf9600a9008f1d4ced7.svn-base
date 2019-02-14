@@ -1,0 +1,195 @@
+import * as React from 'react';
+import { Modal, Row, Col, Input } from 'antd';
+import http from '../../../../../common/api';
+import { LeftDev } from './content/leftDev';
+import { RightTable } from './content/rightTable';
+import { ClickParam } from 'antd/lib/menu';
+import style from './content/index.scss';
+
+export interface PropsCollectionCreateForm {
+    onParams?: boolean;
+    paramsCancle?: () => void;
+    paramSave?: (props: any) => void;
+    leftDev?: any;
+    onValue?: any;
+}
+// const Type = {
+//     BUTTON_CHANGE: 10000,
+//     INPUT_CHANGE: 10001,
+// }
+export class Params extends React.Component<PropsCollectionCreateForm, any> {
+    public pos: any = 0;
+    public _input: any = null;
+    constructor(props: PropsCollectionCreateForm) {
+        super(props)
+        this.state = {
+            visible: false,
+            rightData: [],
+            inputValue: '',
+            data1: ['+', '-', '>', '>=', '(', ')', '=='],
+            data2: ['AND', '*', '\'', '<', '<=', 'OR', 'NOT'],
+            uid: '', // 设备ID
+            property: '', // 参数表达式
+            front: '',
+            onvalueBoolean: false // 参数表达式初始值为true，否则为false，这样当删除input中value值时，property为空了，也不会回到初始值
+        }
+    }
+
+    onMenuItemClick = (param: ClickParam) => {
+        http.postReq(
+            '/ztmanage/a/zt/configpara',
+            { mtd: 'lsig', uid: param.key },
+            (data) => {
+                this.setState({
+                    loading: false,
+                    rightTable: data.lsig,
+                    uid: param.key
+                });
+            }
+        )
+    }
+    onTableItemClick = (record: any) => {
+        const signalid = record.signalid;
+        const uid = this.state.uid
+        const newproperty = `[${uid},${signalid}]`
+        const fontvalue = this.state.property.substring(0, this.pos);
+        const backvalue = this.state.property.substring(this.pos);
+
+        this.setState(
+            {
+                onvalueBoolean: true,
+                property: fontvalue + newproperty + backvalue,
+            },
+            () => {
+                this.pos = this.state.property.length
+            })
+    }
+
+    computerValue = (v) => {
+        const fontvalue = this.state.property.substring(0, this.pos);
+        const backvalue = this.state.property.substring(this.pos);
+        this.setState({
+            property: fontvalue + v + backvalue,
+            onvalueBoolean: true
+        })
+        this.pos += v.length;
+    }
+
+    getPosition = (element) => {
+        let cursorPos = 0;
+        if (document['selection']) { // IE  support
+            var selectRange = document['selection'].createRange();
+            selectRange.moveStart('character', -element.value.length);
+            cursorPos = selectRange.text.length;
+        } else if (element.selectionStart || element.selectionStart === '0') { // Firefox support
+            cursorPos = element.selectionStart;
+        }
+        return cursorPos;
+    }
+
+    addValue = (event) => {
+        this.pos = this.getPosition(event.target);
+    }
+
+    paramsaves = () => {
+        this.props.paramSave(this.state.property)
+    }
+    paramCancle = () => {
+        this.props.paramsCancle();
+        this._input.input.value = '';
+        this.setState({ onvalueBoolean: false })
+    }
+    componentWillReceiveProps(nextProps: any) {
+        this.setState(nextProps)
+    }
+    render() {
+        const { onParams, onValue } = this.props;
+        const { data1, data2, rightTable, property, onvalueBoolean } = this.state;
+        return (
+            <Modal
+                visible={onParams}
+                title="参数表达式"
+                onCancel={this.paramCancle}
+                onOk={this.paramsaves}
+                okText="保存"
+                cancelText="取消"
+                width={1000}
+                maskClosable={false}
+            >
+                <div style={{ border: '1px solid #e8e8e8' }}>
+                    <Row gutter={24}>
+                        <LeftDev
+                            onData={this.props.leftDev}
+                            item_click_={this.onMenuItemClick}
+                        />
+                        <RightTable
+                            tableData={rightTable}
+                            onTableItemClick={this.onTableItemClick}
+                        />
+                    </Row>
+                    <Row>
+                        <div className={style.panel}>
+                            信号告警表达式
+                            </div>
+                        <div>
+                            <Input
+                                value={onvalueBoolean ? property : onValue}
+                                ref={(input) => this._input = input}
+                                onChange={
+                                    (event) => {
+                                        this.setState({
+                                            property: event.target.value,
+                                        })
+                                    }
+                                }
+                                onClick={(event) => {
+                                    this.addValue(event)
+                                    this.setState({ onvalueBoolean: true })
+                                }}
+                                onKeyUp={(event) => {
+                                    this.setState({
+                                        property: this.state.property
+                                    })
+                                }}
+
+                            />
+                            <label className={style.panelRow}>运算符</label>
+                            <Row className={style.panelRow}>
+                                {data1.map((v, i) => {
+                                    return (
+                                        <Col
+                                            span={3}
+                                            key={i}
+                                            // onClick={() => this.Change(v, Type.BUTTON_CHANGE)}
+                                            onClick={() => {
+                                                this.computerValue(v)
+                                            }}
+
+                                        >
+                                            <a><span>{v}</span></a>
+                                        </Col>)
+                                })}
+                            </Row>
+                            <Row className={style.panelRow}>
+                                {data2.map((v, i) => {
+                                    return (
+                                        <Col
+                                            span={3}
+                                            key={i}
+                                            // onClick={() => this.Change(v, Type.BUTTON_CHANGE)}
+                                            onClick={() => {
+                                                this.computerValue(v)
+                                            }}
+                                        >
+                                            <a><span>{v}</span></a>
+                                        </Col>)
+                                })}
+                            </Row>
+                        </div>
+                    </Row>
+                </div>
+
+            </Modal>
+        );
+    }
+}

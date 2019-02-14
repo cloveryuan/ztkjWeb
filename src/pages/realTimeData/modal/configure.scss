@@ -1,0 +1,43 @@
+:global{
+  .ant-advanced-search-form {
+    background: #fbfbfb;
+  }
+
+  .ant-advanced-search-form .ant-form-item {
+    display: flex;
+  }
+
+  .ant-advanced-search-form .ant-form-item-control-wrapper {
+    flex: 1;
+  }
+  .ant-col-12 .ant-form-item-label {
+    text-align: right;
+    width: 100px;
+  }
+  .ant-modal{
+    .ant-row{
+      margin:0!important
+    }
+    .ant-col-18{
+      padding:0!important
+    }
+    .ant-menu-item{
+      padding:0 5px!important;
+      font-size:14px;
+    }
+    .alart{
+      .ant-input-group-addon{
+        color:#fff;
+         background-color: #1890ff
+      }
+    }
+  }
+  .rows{
+    line-height:30px;
+    height:30px;
+    font-size:12px;
+  }
+  .alartvisible{
+    visibility: hidden!important;
+  }
+}

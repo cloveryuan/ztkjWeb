@@ -1,0 +1,26 @@
+{
+   "background": {
+      "scripts": [ "event.js" ]
+   },
+   "browser_action": {
+      "default_icon": "assets/icon128.png",
+      "default_popup": "popup.html",
+      "default_title": "Disable"
+   },
+   "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net blob:; object-src 'self'",
+   "description": "Allow the browser to play HLS (m3u8) or MPEG-Dash (mpd) video urls 'natively'",
+   "icons": {
+      "128": "assets/icon128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArh8k9RJQYcB7KfmMO5AQpI3DdCQPLGL9DzWHNiN81ivLCGBnAINd+tjmvo/FM7bs2dVuR+vDafx6VkO8yEAXlImM3stHFSG5bvn0G5Fei+sltSyZwXGYy2aK7EGL9K0BZMY9Dx5EVY3SoujhE+7vMBIDJondAoqh83U00+bcqJiWwbCr3diBiM39LcLsIWmtoBhWIR11GewlLl5XnYDdUmb4QQoIMhFrZVw5odlasNpNGKouzsT/pz8qe8ZRdaFrPMu4P1hyACC2uR81DuC/A/8PgalFW1GYNojUk/tR/PhCZexhRM5FC4zpIeLxqwyUL/y5CEfrcxtCddyvFv+U8wIDAQAB",
+   "manifest_version": 2,
+   "name": "Native MPEG-Dash + HLS Playback",
+   "options_ui": {
+      "chrome_style": true,
+      "page": "options.html"
+   },
+   "permissions": [ "tabs", "*://*/*.m3u8*", "*://*/*.mpd*", "*://*/*/Manifest*", "webRequest", "webRequestBlocking", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.1",
+   "web_accessible_resources": [ "event.js", "state_machine.js", "globals.js", "ui_mapping.js", "index.html", "index.js", "popup.js", "controls.js", "range.js", "options.html", "ajax.js", "player.js", "popup.html", "style.css", "dropdown.js", "options.js", "assets/icon128.png", "assets/icon128.svg", "assets/loader.svg", "assets/icon128grey.png", "libs/hasplayer.min.js.map", "libs/animate.min.css", "libs/jquery-3.3.1.min.js", "libs/hls.min.js", "libs/dash.all.min.js.map", "libs/hasplayer.min.js", "libs/dash.all.min.js", "libs/materialize/README.md", "libs/materialize/LICENSE", "libs/materialize/fonts/materialize-icons.woff2", "libs/materialize/fonts/roboto/Roboto-Bold.woff", "libs/materialize/fonts/roboto/Roboto-Medium.woff", "libs/materialize/fonts/roboto/Roboto-Bold.woff2", "libs/materialize/fonts/roboto/Roboto-Regular.woff", "libs/materialize/fonts/roboto/Roboto-Thin.woff2", "libs/materialize/fonts/roboto/Roboto-Regular.woff2", "libs/materialize/fonts/roboto/Roboto-Light.woff2", "libs/materialize/fonts/roboto/Roboto-Light.woff", "libs/materialize/fonts/roboto/Roboto-Thin.woff", "libs/materialize/fonts/roboto/Roboto-Medium.woff2", "libs/materialize/js/materialize.min.js", "libs/materialize/css/icons.css", "libs/materialize/css/materialize.min.css" ]
+}

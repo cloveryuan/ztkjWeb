@@ -1,0 +1,54 @@
+import reqwest from 'reqwest'
+
+let Api = ''
+var header = {
+    'Accept': 'application/json',
+    'content-type': 'application/json',
+    'Authorization': null,
+}
+
+function getReq(url, data, suc, err) {
+    reqwest({
+        url: Api + url,
+        method: 'get',
+        header: header,
+        data: data,
+        success: function (res) {
+            return typeof suc == "function" && suc(res)
+        },
+        error: function () {
+            return typeof err == "function" && err()
+        }
+    })
+}
+
+function postReq(url, data, suc, err, then) {
+    new Promise((resolve, reject) => {
+        reqwest({
+            url: Api + url,
+            header: header,
+            data: data,
+            method: 'post',
+            success: function (res) {
+                console.log(res);
+                resolve(1)
+                return typeof suc == "function" && suc(res)
+            },
+            error: function (xhr, status, err) {
+                console.log(xhr, status, err.toString());
+                return typeof err == "function" && err()
+            }
+        })
+    }).then(() => {
+        return typeof then == "function" && then()
+    })
+}
+
+const http = {
+    getReq: getReq,
+    postReq: postReq,
+    header: header,
+    Api: Api
+}
+
+export default http

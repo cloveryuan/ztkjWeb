@@ -1,0 +1,27 @@
+:global{
+    .alarmgradeColor1{
+    color:#FF8000;
+  }
+   .alarmgradeColor2{
+    color:#808080;
+  }
+   .alarmgradeColor3{
+    color:#FF0000;
+  }
+  .loadingpic{
+  text-align: center;
+  padding: 30px 50px;
+  margin: 200px auto;
+  box-sizing:border-box;
+  }
+  .ant-layout-content{
+    width:100%;
+    height:100%;
+  }
+}
+table{
+  tr{
+    cursor:pointer;
+     font-size:12px;
+  }
+}

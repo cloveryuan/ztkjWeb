@@ -1,0 +1,16 @@
+:global{
+    .videowrap{
+        background:transparent;
+        .ant-modal-content{
+            width:50%;
+            height:50vh;
+            margin:0 auto;
+            background:transparent;
+            .ant-modal-body{
+                width:100%;
+                padding:0!important;
+                background:#000;
+            }
+        }
+    }
+}

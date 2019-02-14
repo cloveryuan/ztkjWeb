@@ -1,0 +1,35 @@
+.nav {
+  list-style: none;
+  margin-bottom:0px;
+  padding:0;
+  float:right;
+  li{
+    display:inline-block;
+    vertical-align: middle;
+    margin-right:16px;
+    cursor: pointer;
+    line-height:16px;
+    width:60px;
+    color:#fff;
+    text-align:center;
+      img{
+        display:block;
+        margin-right:4px;
+        font-size:10px;
+        width:25px;
+        height:25px;
+        border-radius:50%;
+        margin:0 auto;
+      }
+      .text{
+        margin-top:6px;
+        font-size:12px;
+        display: block;
+        line-height:14px;
+      }
+      i{
+          margin-top:4px;
+      }
+  }
+}
+

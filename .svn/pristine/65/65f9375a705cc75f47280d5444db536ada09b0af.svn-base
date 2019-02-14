@@ -1,0 +1,35 @@
+17:26:53 192.168.1.31:55137 Requested GET /hls/
+17:26:53 192.168.1.31:55137 Requested GET /hls/state_machine.js
+17:26:53 192.168.1.31:55137 Fully downloaded - 1.9 K @ 317.1 KB/s - /hls/state_machine.js
+17:26:53 192.168.1.31:55143 Requested GET /hls/libs/jquery-3.3.1.min.js
+17:26:53 192.168.1.31:55142 Requested GET /hls/style.css
+17:26:53 192.168.1.31:55137 Requested GET /hls/libs/hasplayer.min.js
+17:26:53 192.168.1.31:55143 Fully downloaded - 84.9 K @ 3.9 MB/s - /hls/libs/jquery-3.3.1.min.js
+17:26:53 192.168.1.31:55142 Requested GET /hls/libs/materialize/js/materialize.min.js
+17:26:53 192.168.1.31:55144 Requested GET /hls/libs/animate.min.css
+17:26:53 192.168.1.31:55145 Requested GET /hls/libs/materialize/css/materialize.min.css
+17:26:53 192.168.1.31:55143 Requested GET /hls/range.js
+17:26:53 192.168.1.31:55146 Requested GET /hls/libs/materialize/css/icons.css
+17:26:53 192.168.1.31:55143 Fully downloaded - 4.8 K @ 300.0 KB/s - /hls/range.js
+17:26:53 192.168.1.31:55144 Requested GET /hls/dropdown.js
+17:26:53 192.168.1.31:55144 Fully downloaded - 3.1 K @ 305.1 KB/s - /hls/dropdown.js
+17:26:53 192.168.1.31:55146 Requested GET /hls/ui_mapping.js
+17:26:53 192.168.1.31:55143 Requested GET /hls/globals.js
+17:26:53 192.168.1.31:55142 Fully downloaded - 162.3 K @ 1.7 MB/s - /hls/libs/materialize/js/materialize.min.js
+17:26:53 192.168.1.31:55146 Fully downloaded - 3.0 K @ 127.0 KB/s - /hls/ui_mapping.js
+17:26:53 192.168.1.31:55145 Requested GET /hls/assets/loader.svg
+17:26:53 192.168.1.31:55143 Fully downloaded - 228 @ 7.4 KB/s - /hls/globals.js
+17:26:53 192.168.1.31:55146 Requested GET /hls/controls.js
+17:26:53 192.168.1.31:55145 Fully downloaded - 1.2 K @ 62.3 KB/s - /hls/assets/loader.svg
+17:26:53 192.168.1.31:55146 Fully downloaded - 9.8 K @ 750.2 KB/s - /hls/controls.js
+17:26:53 192.168.1.31:55145 Requested GET /hls/player.js
+17:26:53 192.168.1.31:55146 Requested GET /hls/index.js
+17:26:53 192.168.1.31:55145 Fully downloaded - 11.0 K @ 998.2 KB/s - /hls/player.js
+17:26:53 192.168.1.31:55146 Fully downloaded - 6.2 K @ 559.7 KB/s - /hls/index.js
+17:26:53 192.168.1.31:55137 Fully downloaded - 468.2 K @ 2.5 MB/s - /hls/libs/hasplayer.min.js
+17:26:53 192.168.1.31:55137 Requested GET /hls/libs/materialize/fonts/roboto/Roboto-Regular.woff2
+17:26:53 192.168.1.31:55137 Fully downloaded - 63.3 K @ 3.6 MB/s - /hls/libs/materialize/fonts/roboto/Roboto-Regular.woff2
+17:26:53 192.168.1.31:55137 Requested GET /hls/libs/materialize/fonts/materialize-icons.woff2
+17:26:53 192.168.1.31:55137 Fully downloaded - 47.7 K @ 2.0 MB/s - /hls/libs/materialize/fonts/materialize-icons.woff2
+17:26:53 192.168.1.31:55137 Requested GET /hls/libs/hls.min.js
+17:26:54 192.168.1.31:55137 Fully downloaded - 246.9 K @ 1.7 MB/s - /hls/libs/hls.min.js

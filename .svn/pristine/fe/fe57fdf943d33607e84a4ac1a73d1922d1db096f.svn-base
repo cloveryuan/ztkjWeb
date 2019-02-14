@@ -1,0 +1,17 @@
+@import 'flex-app.less';
+
+:global {
+  .react-layout-components--box {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  //[class^="ant"] {
+  //  padding: 1px;
+  //}
+}
+
+.flex-app(data-box, data-flex, data-flex-box); //使用data-flex和data-flex-box属性匹

@@ -1,0 +1,19 @@
+//
+$base-font-size: 14px !default;
+
+//
+$left-side-color: rgb(2, 17, 31);
+
+@function strip-unit($num) {
+  @return $num/($num * 0 + 1);
+}
+
+@function p2r($value) {
+  $v: strip-unit($value);
+  $relative: strip-unit($base-font-size);
+  @return $v/$relative + rem
+}
+
+//@function p2r($value) {
+//  @return $value/100 + "rem"
+//}
